@@ -46,15 +46,16 @@ comments: true
 }
 </style>
 
-The height of a table row is defined by the the sum of vertical borders, paddings, margins, and line height multiplied by the number of lines. If we want to add a vertical border of 1px, while keeping the line-height of the text to be grid size, the height of the row is off by 1px. In this article, I present all my past trials and show the solution using background-image property.
+The height of a table row is defined by the the sum of vertical borders, paddings, margins, and line height multiplied by the number of lines.
+Adding a vertical border of 1px height makes the row to be off by 1px from the grid, if line-height is aligned with the grid size. In this article, I present the year-long journey to create a pixel-perfect bordered table and show the ultimate solution using background-image property.
 
 From now on, I will use the following table example for all figures.
 
 {% highlight html %}
 <table>
   <tr><td>Hello World</td></tr>
-  <tr><td>Hello World</td></tr>
   <tr><td>Hello World<br>Hello World</td></tr>
+  <tr><td>Hello World</td></tr>
 </table>
 {% endhighlight %}
 {% highlight css %}
@@ -98,7 +99,7 @@ td {
   <figcaption>Figure 2.</figcaption>
 </div>
 
-Another alternative is to make the sum of vertical padding and border to be the multiplication of the baseline grid. It surely works, but it will take much more vertical spaces.
+Another alternative is to make the sum of vertical padding and border to be the multiplication of the baseline grid. It surely works, but it takes a lot of extra vertical spaces.
 
 
 {% highlight css %}
