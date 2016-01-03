@@ -2,6 +2,7 @@
  * Site header
  */
 .site-header {
+    font-family: $base-font-family-en;
     box-sizing: border-box;
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
@@ -24,6 +25,7 @@
 
 .site-nav {
     float: right;
+    font-size: 15px;
     line-height: $spacing-unit * 3 - 6px;
 
     .menu-icon {
@@ -32,7 +34,6 @@
 
     .page-link {
         color: $text-color;
-        font-size: 15px;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
@@ -181,6 +182,7 @@
     }
 
     #comments-label {
+        font-family: $base-font-family-en;
         display: block;
         cursor: pointer;
     }
@@ -199,7 +201,7 @@
             .shrink { display: visible; }
         }
     }
-    
+
     #comments-checkbox:not(:checked) {
         & ~ #comments-panel {
             transform: scaleY(0);

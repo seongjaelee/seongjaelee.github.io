@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+lang: en
 ---
 
 Seongjae Lee is a software developer in Seattle, who is interested in computer graphics, visualizations, and typography. This site is designed to be a permanent archive of my articles, built on [Jekyll][1] and hosted on [GitHub Pages][2].
