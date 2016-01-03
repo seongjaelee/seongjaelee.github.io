@@ -6,12 +6,24 @@
 
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
+$base-font-family: 'Nanum Myeongjo', serif;
+$base-font-family-en: 'PT Serif', serif;
+$mono-font-family: Monaco, "DejaVu Sans Mono", "Courier New", monospace;
 
-$spacing-unit:     30px;
+$mono-font-size:   12px;
+$base-font-size:   15px;
+$base-font-size-en: 18px;
+$base-font-size-ko: 15px;
+
+$small-font-size:  0.875em;
+$h4-font-size:     1em;
+$h3-font-size:     1.25em;
+$h2-font-size:     1.5em;
+$h1-font-size:     2em;
+
+$hr-spacing-unit:  1.5em;
+$spacing-unit:     28px;
+$mono-line-height: 18px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
@@ -22,9 +34,7 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $on-palm:          600px;
-$on-laptop:        800px;
-
-
+$on-laptop:        600px;
 
 // Using media queries with like this:
 // @include media-query($palm) {

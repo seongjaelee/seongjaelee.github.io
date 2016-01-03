@@ -4,8 +4,15 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Seongjae Lee is a software developer in Seattle, who is interested in computer graphics, visualizations, and typography. This site is designed to be a permanent archive of my articles, built on [Jekyll][1] and hosted on [GitHub Pages][2].
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+[1]: http://jekyllrb.com/
+[2]: https://pages.github.com/
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+If you want to know more about me, please visit:
+
+- [Resume](http://bluebrown.net/)
+- [Twitter](http://twitter.com/seongjaelee)
+- [GitHub](https://github.com/seongjaelee)
+- [LinkedIn](https://www.linkedin.com/in/seongjae-lee-23028359)
+- Email: seongjae at gmail dot com

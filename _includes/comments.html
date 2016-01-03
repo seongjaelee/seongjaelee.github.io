@@ -1,0 +1,46 @@
+{% if page.comments %}
+<div class='site-comments'>
+  <div class='wrapper'>
+    <input type='checkbox' id='comments-checkbox' onchange='toggleCommentsCheckbox(this)'>
+    <label id='comments-label' for='comments-checkbox'>
+      <svg class='expand icon' fill='#000000' height='28' viewBox='0 0 24 24' width='28' xmlns='http://www.w3.org/2000/svg'>
+        <path d='M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'/>
+        <path d='M0 0h24v24H0z' fill='none'/>
+      </svg>
+      <svg class='shrink icon' ffill='#000000' height='28' viewBox='0 0 24 24' width='28' xmlns='http://www.w3.org/2000/svg'>
+        <path d='M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z'/>
+        <path d='M0 0h24v24H0z' fill='none'/>
+      </svg>
+    </label>
+    <div id='comments-panel'>
+      <div id='disqus_thread'></div>
+    </div>
+    <a id='comment-anchor'></a>
+  </div>
+</div>
+<script type='text/javascript'>
+  var disqus_init = false;
+  var disqus_shortname = 'seongjaelee';
+  var disqus_identifier = '{{ site.disqusid }}{{ page.url | replace:'index.html','' }}';
+
+  function initDisqus() {
+    if (disqus_init) {
+      return;
+    }
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//{{ site.disqusid }}.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    disqus_init = true;
+  }
+
+  function toggleCommentsCheckbox(element) {
+    if (element.checked) {
+      var scrollTop = $(document).scrollTop();
+      $('html, body').animate({ scrollTop: scrollTop + 140 }, 500);
+    }
+    setTimeout(initDisqus, 500);
+  }
+</script>
+{% endif %}

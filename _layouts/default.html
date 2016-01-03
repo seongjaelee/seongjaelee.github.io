@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ page.lang }}">
 
   {% include head.html %}
 
   <body>
 
-    {% include header.html %}
+    <div class="body">
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
+        {% include header.html %}
+
+        <div class="page-content">
+          <div class="wrapper">
+            {{ content }}
+          </div>
+        </div>
+
+        {% include comments.html %}
+        {% include google-analytics.html %}
+
     </div>
-
-    {% include footer.html %}
 
   </body>
 
