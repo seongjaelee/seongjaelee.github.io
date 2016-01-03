@@ -3,14 +3,15 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure,
+dl, dd, ol, ul, li, figure,
 table, th, td {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 sub, sup {
-  line-height: 0;
+    line-height: 0;
 }
 
 
@@ -22,12 +23,11 @@ body {
     font-family: $base-font-family;
     &:lang(en) { font-size: $base-font-size-en; }
     &:lang(ko) { font-size: $base-font-size-ko; }
-    font-weight: 300;
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
     line-height: $spacing-unit;
-    // background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAcCAYAAACgXdXMAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAABCNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iCiAgICAgICAgICAgIHhtbG5zOmV4aWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vZXhpZi8xLjAvIgogICAgICAgICAgICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iCiAgICAgICAgICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyI+CiAgICAgICAgIDx0aWZmOlJlc29sdXRpb25Vbml0PjI8L3RpZmY6UmVzb2x1dGlvblVuaXQ+CiAgICAgICAgIDx0aWZmOkNvbXByZXNzaW9uPjU8L3RpZmY6Q29tcHJlc3Npb24+CiAgICAgICAgIDx0aWZmOlhSZXNvbHV0aW9uPjcyPC90aWZmOlhSZXNvbHV0aW9uPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICAgICA8dGlmZjpZUmVzb2x1dGlvbj43MjwvdGlmZjpZUmVzb2x1dGlvbj4KICAgICAgICAgPGV4aWY6UGl4ZWxYRGltZW5zaW9uPjE8L2V4aWY6UGl4ZWxYRGltZW5zaW9uPgogICAgICAgICA8ZXhpZjpDb2xvclNwYWNlPjE8L2V4aWY6Q29sb3JTcGFjZT4KICAgICAgICAgPGV4aWY6UGl4ZWxZRGltZW5zaW9uPjI4PC9leGlmOlBpeGVsWURpbWVuc2lvbj4KICAgICAgICAgPGRjOnN1YmplY3Q+CiAgICAgICAgICAgIDxyZGY6QmFnLz4KICAgICAgICAgPC9kYzpzdWJqZWN0PgogICAgICAgICA8eG1wOk1vZGlmeURhdGU+MjAxNi0xMi0zMFQxODoxMjo4NjwveG1wOk1vZGlmeURhdGU+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+UGl4ZWxtYXRvciAzLjQuMjwveG1wOkNyZWF0b3JUb29sPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KgXDF7AAAABBJREFUCB1jYBgcYPv27f8BB/oDJZPHraYAAAAASUVORK5CYII='); // 28px
+    //background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='28'><rect x='0' y='27' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
 }
 
 
@@ -92,26 +92,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: $h1-font-size;
-    line-height: $spacing-unit*1.5;
-    margin-top: $spacing-unit*1.5;
+    line-height: $spacing-unit * 1.5;
+    margin-top: $spacing-unit * 1.5;
 }
 
 h2 {
     font-size: $h2-font-size;
-    line-height: $spacing-unit*1.5;
+    line-height: $spacing-unit * 1.5;
     margin-top: $spacing-unit;
 }
 
 h3 {
     font-size: $h3-font-size;
     line-height: $spacing-unit;
-    margin-top: $spacing-unit/2;
+    margin-top: $spacing-unit / 2;
 }
 
 h4 {
     font-size: $h4-font-size;
     line-height: $spacing-unit;
-    margin-top: $spacing-unit/2;
+    margin-top: $spacing-unit / 2;
 }
 
 
@@ -154,7 +154,7 @@ blockquote {
  */
 pre,
 code {
-    border: 1px solid $grey-color-light;
+    //border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eee;
     font-family: $mono-font-family;
@@ -167,7 +167,7 @@ code {
 }
 
 pre {
-    padding: 11px 12px 11px;
+    padding: $mono-line-height / 2;
     overflow-x: scroll;
     line-height: $mono-line-height;
 
@@ -184,8 +184,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(620px - (#{$hr-spacing-unit} * 2));
-    max-width:         calc(620px - (#{$hr-spacing-unit} * 2));
+    max-width: -webkit-calc(620px - (#{$hr-spacing-unit} / 2));
+    max-width:         calc(620px - (#{$hr-spacing-unit} / 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $hr-spacing-unit;
@@ -242,13 +242,33 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
-  box-sizing: border-box;
-  margin-left: $hr-spacing-unit
+}
+
+th {
+  text-align: left;
+}
+
+th {
+  vertical-align: bottom;
+}
+
+td {
+  vertical-align: top;
 }
 
 th, td {
-  overflow: visible;
-  border: 0;
-  margin: 0;
-  padding-right: $hr-spacing-unit;
+  padding-right: $hr-spacing-unit / 2;
+}
+
+tr {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect x='0' y='0' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
+  background-repeat: repeat-x;
+}
+
+thead > tr {
+  background-position: bottom;
+}
+
+tbody > tr {
+  background-position: top;
 }
