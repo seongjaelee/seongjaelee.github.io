@@ -7,27 +7,23 @@ comments: true
 ---
 
 <style type='text/css' scoped>
-.figure {
-  margin-left: 12px;
-  float: right;
-}
 .figure-wrapper {
   padding: 12px;
-  border: 1px solid black;
+  border: 1px solid #e8e8e8;
   background-color: white;
 }
 .gridline {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='2' height='20'><rect x='0' y='19' width='1' height='1' fill='red'></rect></svg>");
 }
-.figure tr {
+.figure-wrapper tr {
   background-image: none;
 }
-.figure table, .figure tr, .figure td {
+.figure-wrapper table, .figure-wrapper tr, .figure-wrapper td {
   padding: 0;
   margin: 0;
   border: 0;
 }
-.figure td {
+.figure-wrapper td {
   font-size: 12px;
   line-height: 20px;
 }
@@ -46,8 +42,7 @@ comments: true
 }
 </style>
 
-The height of a table row is defined by the the sum of vertical borders, paddings, margins, and line height multiplied by the number of lines.
-Adding a vertical border of 1px height makes the row to be off by 1px from the grid, if line-height is aligned with the grid size. In this article, I present the year-long journey to create a pixel-perfect bordered table and show the ultimate solution using background-image property.
+The height of a table row is defined by the the sum of vertical borders, paddings, margins, and line height multiplied by the number of lines. Adding a vertical border of 1px height makes the row to be off by 1px from the grid, breaking the vertical rhythm. In this article, I present my year-long journey to create a pixel-perfect bordered table and show the ultimate solution using background-image property.
 
 From now on, I will use the following table example for all figures.
 
@@ -65,7 +60,7 @@ td {
 }
 {% endhighlight %}
 
-<div class='figure' id='figure1'>
+<aside id='figure1'>
   <div class='figure-wrapper'>
     <div class='gridline'>
       <table>
@@ -75,10 +70,10 @@ td {
       </table>
     </div>
   </div>
-  <figcaption>Figure 1.</figcaption>
-</div>
+  <figcaption>Example 1.</figcaption>
+</aside>
 
-Figure 1 is the naïve use of the table just adding 1px border on the bottom. Here, gridlines are rendered as red dots (24px), while table row borders are rendered as blue lines. We can see the discrepency adds up as we have more rows.
+Example 1 shows a naïve example by adding 1px border on the bottom. Here, gridlines are rendered as red dots (24px), while table row borders are rendered as blue lines. We can see the discrepency between gridline and the row lines adds up.
 
 {% highlight css %}
 td {
@@ -86,7 +81,7 @@ td {
 }
 {% endhighlight %}
 
-<div class='figure' id='figure2'>
+<aside id='figure2'>
   <div class='figure-wrapper'>
     <div class='gridline'>
       <table>
@@ -96,14 +91,13 @@ td {
       </table>
     </div>
   </div>
-  <figcaption>Figure 2.</figcaption>
-</div>
+  <figcaption>Example 2.</figcaption>
+</aside>
 
-Another alternative is to make the sum of vertical padding and border to be the multiplication of the baseline grid. It surely works, but it takes a lot of extra vertical spaces.
-
+Example 2 shows my next solution to make the sum of vertical padding and border to be the multiplication of the grid size. I distributed paddings on top and bottom evenly so the texts can lie in the middle of each row. It works, but it takes a lot of extra vertical spaces.
 
 {% highlight css %}
-tr {
+td {
   padding-top: 10px;
   padding-bottom: 9px;
   border-bottom: 1px solid rgba(0, 0, 255, 0.4);
@@ -111,7 +105,7 @@ tr {
 {% endhighlight %}
 
 
-<div class='figure' id='figure3'>
+<aside id='figure3'>
   <div class='figure-wrapper'>
     <div class='gridline'>
       <table>
@@ -121,13 +115,13 @@ tr {
       </table>
     </div>
   </div>
-  <figcaption>Figure 3.</figcaption>
-</div>
+  <figcaption>Example 3.</figcaption>
+</aside>
 
-All these solutions were unsatisfactory, so I had been avoiding the use of bordered tables, until I found this solution using background-image property.
+Since both solutions are unsatisfactory, I had been using striped tables instead of bordered table. But I recently came up with this solution using background-image property. Example 3 has table row borders perfectly aligned with the baselines.
 
 {% highlight css %}
-tr {
+td {
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='20'><rect x='0' y='19' width='1' height='1' fill='blue' fill-opacity='0.4'></rect></svg>");
   background-repeat: repeat-x;
   background-position: bottom;
