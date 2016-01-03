@@ -93,8 +93,16 @@
  * Page content
  */
 .page-content {
-    &:lang(en) { font-family: $base-font-family-en; }
-    padding: $spacing-unit 0;
+    &:lang(en) {
+        // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='" + $spacing-unit-en + "'><rect x='0' y='" + ($spacing-unit-en - 1) + "' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
+        font-family: $base-font-family-en;
+        padding: $spacing-unit-en 0;
+    }
+    &:lang(ko) {
+        // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='" + $spacing-unit-ko + "'><rect x='0' y='" + ($spacing-unit-ko - 1) + "' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
+        font-family: $base-font-family;
+        padding: $spacing-unit-ko 0;
+    }
 }
 
 .page-heading {
@@ -106,8 +114,7 @@
     list-style: none;
 
     > li {
-        padding: $spacing-unit / 2 0;
-        line-height: $spacing-unit;
+        padding: $spacing-unit-ko / 2 0;
         background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect x='0' y='0' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
         background-repeat: repeat-x;
         background-position: bottom;
@@ -117,12 +124,12 @@
 .post-meta {
     color: $grey-color;
     font-size: $small-font-size;
-    line-height: $spacing-unit;
+    vertical-align: bottom;
 }
 
 .post-link {
     font-size: $h3-font-size;
-    line-height: $spacing-unit;
+    vertical-align: bottom;
 }
 
 
@@ -135,7 +142,9 @@
 }
 
 .post-title {
-    margin-top: 0;
+    &:lang(ko), &:lang(en) {
+        margin-top: 0;
+    }
 }
 
 
@@ -153,10 +162,15 @@
 
 .footnotes {
     font-size: $small-font-size;
-    box-sizing: border-box;
-    margin-top: $spacing-unit;
     border-top: 1px solid $grey-color-light;
-    padding-top: $spacing-unit - 1;
+    &:lang(ko) {
+        margin-top: $spacing-unit-ko;
+        padding-top: $spacing-unit-ko - 1;
+    }
+    &:lang(en) {
+        margin-top: $spacing-unit-en;
+        padding-top: $spacing-unit-en - 1;
+    }
 }
 
 

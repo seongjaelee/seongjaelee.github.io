@@ -10,9 +10,9 @@ $base-font-family: 'Nanum Myeongjo', serif;
 $base-font-family-en: 'PT Serif', serif;
 $mono-font-family: Monaco, 'DejaVu Sans Mono', 'Courier New', monospace;
 
-$mono-font-size:   12px;
+$mono-font-size:   0.875em;
 $base-font-size:   15px;
-$base-font-size-en: 18px;
+$base-font-size-en: 16px;
 $base-font-size-ko: 15px;
 
 $small-font-size:  0.875em;
@@ -21,8 +21,11 @@ $h3-font-size:     1.25em;
 $h2-font-size:     1.5em;
 $h1-font-size:     2em;
 
-$hr-spacing-unit:  24px;
-$spacing-unit:     28px;
+$hr-spacing-unit:  20px;
+$spacing-unit:     24px; // 16/24 and 15/30
+$spacing-unit-en:  24px;
+$spacing-unit-ko:  30px;
+$width:            560px;
 $mono-line-height: 18px;
 
 $text-color:       #111;

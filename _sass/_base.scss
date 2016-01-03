@@ -3,7 +3,7 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, li, figure,
+dl, dd, ol, ul, li, figcaption,
 table, th, td {
     margin: 0;
     padding: 0;
@@ -23,11 +23,12 @@ body {
     font-family: $base-font-family;
     &:lang(en) { font-size: $base-font-size-en; }
     &:lang(ko) { font-size: $base-font-size-ko; }
+    line-height: $spacing-unit;
+    &:lang(en) { line-height: $spacing-unit-en; }
+    &:lang(ko) { line-height: $spacing-unit-ko; }
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
-    line-height: $spacing-unit;
-    //background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='28'><rect x='0' y='27' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
 }
 
 
@@ -37,9 +38,11 @@ body {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure, table,
+ul, ol, dl, figcaption, table,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
+  &:lang(en) { margin-bottom: $spacing-unit-en / 2; }
+  &:lang(ko) { margin-bottom: $spacing-unit-ko / 2; }
 }
 
 
@@ -94,24 +97,40 @@ h1 {
     font-size: $h1-font-size;
     line-height: $spacing-unit * 1.5;
     margin-top: $spacing-unit * 1.5;
+    &:lang(en) { line-height: $spacing-unit-en * 1.5; }
+    &:lang(ko) { line-height: $spacing-unit-ko * 1.5; }
+    &:lang(en) { margin-top: $spacing-unit-en * 1; }
+    &:lang(ko) { margin-top: $spacing-unit-ko * 1; }
 }
 
 h2 {
     font-size: $h2-font-size;
     line-height: $spacing-unit * 1.5;
     margin-top: $spacing-unit;
+    &:lang(en) { line-height: $spacing-unit-en * 1.5; }
+    &:lang(ko) { line-height: $spacing-unit-ko * 1.5; }
+    &:lang(en) { margin-top: $spacing-unit-en; }
+    &:lang(ko) { margin-top: $spacing-unit-ko; }
 }
 
 h3 {
     font-size: $h3-font-size;
     line-height: $spacing-unit;
     margin-top: $spacing-unit / 2;
+    &:lang(en) { line-height: $spacing-unit-en; }
+    &:lang(ko) { line-height: $spacing-unit-ko; }
+    &:lang(en) { margin-top: $spacing-unit-en / 2; }
+    &:lang(ko) { margin-top: $spacing-unit-ko / 2; }
 }
 
 h4 {
     font-size: $h4-font-size;
     line-height: $spacing-unit;
     margin-top: $spacing-unit / 2;
+    &:lang(en) { line-height: $spacing-unit-en; }
+    &:lang(ko) { line-height: $spacing-unit-ko; }
+    &:lang(en) { margin-top: $spacing-unit-en / 2; }
+    &:lang(ko) { margin-top: $spacing-unit-ko / 2; }
 }
 
 
@@ -184,17 +203,17 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(620px - (#{$hr-spacing-unit} / 2));
-    max-width:         calc(620px - (#{$hr-spacing-unit} / 2));
+    max-width: -webkit-calc(#{$width} - (#{$hr-spacing-unit} / 2));
+    max-width:         calc(#{$width} - (#{$hr-spacing-unit} / 2));
     margin-right: auto;
     margin-left: auto;
     padding-right: $hr-spacing-unit;
     padding-left: $hr-spacing-unit;
     @extend %clearfix;
 
-    @include media-query($on-laptop) {
-        max-width: -webkit-calc(620px - (#{$hr-spacing-unit}));
-        max-width:         calc(620px - (#{$hr-spacing-unit}));
+    @include media-query($on-palm) {
+        max-width: -webkit-calc(#{$width} - (#{$hr-spacing-unit}));
+        max-width:         calc(#{$width} - (#{$hr-spacing-unit}));
         padding-right: $hr-spacing-unit / 2;
         padding-left: $hr-spacing-unit / 2;
     }
@@ -271,4 +290,27 @@ thead > tr {
 
 tbody > tr {
   background-position: top;
+}
+
+
+
+/**
+ * Asides
+ */
+aside {
+  position: absolute;
+  max-width: 180px;
+  margin-left: $width + $hr-spacing-unit / 2;
+
+  @include media-query($on-palm + 360px) {
+    position: relative;
+    margin-left: 0;
+    padding-bottom: $spacing-unit / 2;
+    &:lang(en) { padding-bottom: $spacing-unit-en / 2; }
+    &:lang(ko) { padding-bottom: $spacing-unit-ko / 2; }
+  }
+
+  figcaption {
+    font-size: $small-font-size;
+  }
 }
