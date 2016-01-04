@@ -10,7 +10,6 @@ comments: true
 .figure {
   font-size: 12px;
   line-height: 1.5;
-  width: 400px;
   border: 1px solid #e8e8e8;
   padding: 12px;
 }
