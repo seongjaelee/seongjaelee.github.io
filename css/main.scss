@@ -10,12 +10,18 @@ $base-font-family: 'Nanum Myeongjo', serif;
 $base-font-family-en: 'PT Serif', serif;
 $mono-font-family: Monaco, 'DejaVu Sans Mono', 'Courier New', monospace;
 
-$mono-font-size:   0.875em;
+$mono-font-size:   12px;
 $base-font-size:   15px;
 $base-font-size-en: 16px;
 $base-font-size-ko: 15px;
+$base-font-sizes: ('en': ('desktop': 17px, 'palm': 13px), 'ko': ('desktop': 15px, 'palm': 14px));
+$spacing-units: ('en': ('desktop': 24px, 'palm': 18px), 'ko': ('desktop': 28px, 'palm': 26px));
+$spacing-units-half: ('en': ('desktop': 24px/2, 'palm': 18px/2), 'ko': ('desktop': 28px/2, 'palm': 26px/2));
+$spacing-units-three-half: ('en': ('desktop': 24px*1.5, 'palm': 18px*1.5), 'ko': ('desktop': 28px*1.5, 'palm': 26px*1.5));
+$mono-font-sizes: ('en': ('desktop': 12px, 'palm': 10px), 'ko': ('desktop': 12px, 'palm': 10px));
+$mono-line-heights: ('en': ('desktop': 16px, 'palm': 18px), 'ko': ('desktop': 21px, 'palm': 13px));
 
-$small-font-size:  0.875em;
+$small-font-size:  0.8em;
 $h4-font-size:     1em;
 $h3-font-size:     1.25em;
 $h2-font-size:     1.5em;
@@ -52,6 +58,16 @@ $on-laptop:        600px;
     }
 }
 
+@mixin responsive($property, $values) {
+    @each $lang, $lang-values in $values {
+        &:lang(#{$lang}) {
+            #{$property}: #{map-get($lang-values, desktop)};
+            @media screen and (max-width: 600px) {
+                #{$property}: #{map-get($lang-values, palm)};
+            }
+        }
+    }
+}
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)

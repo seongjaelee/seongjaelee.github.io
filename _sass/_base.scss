@@ -21,11 +21,8 @@ sub, sup {
  */
 body {
     font-family: $base-font-family;
-    &:lang(en) { font-size: $base-font-size-en; }
-    &:lang(ko) { font-size: $base-font-size-ko; }
-    line-height: $spacing-unit;
-    &:lang(en) { line-height: $spacing-unit-en; }
-    &:lang(ko) { line-height: $spacing-unit-ko; }
+    @include responsive('font-size', $base-font-sizes);
+    @include responsive('line-height', $spacing-units);
     color: $text-color;
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
@@ -38,11 +35,9 @@ body {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figcaption, table,
+ul, ol, dl, figcaption, table, aside
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
-  &:lang(en) { margin-bottom: $spacing-unit-en / 2; }
-  &:lang(ko) { margin-bottom: $spacing-unit-ko / 2; }
+    @include responsive('margin-bottom', $spacing-units-half);
 }
 
 
@@ -95,42 +90,26 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: $h1-font-size;
-    line-height: $spacing-unit * 1.5;
-    margin-top: $spacing-unit * 1.5;
-    &:lang(en) { line-height: $spacing-unit-en * 1.5; }
-    &:lang(ko) { line-height: $spacing-unit-ko * 1.5; }
-    &:lang(en) { margin-top: $spacing-unit-en * 1; }
-    &:lang(ko) { margin-top: $spacing-unit-ko * 1; }
+    @include responsive('line-height', $spacing-units-three-half);
+    @include responsive('margin-top', $spacing-units);
 }
 
 h2 {
     font-size: $h2-font-size;
-    line-height: $spacing-unit * 1.5;
-    margin-top: $spacing-unit;
-    &:lang(en) { line-height: $spacing-unit-en * 1.5; }
-    &:lang(ko) { line-height: $spacing-unit-ko * 1.5; }
-    &:lang(en) { margin-top: $spacing-unit-en; }
-    &:lang(ko) { margin-top: $spacing-unit-ko; }
+    @include responsive('line-height', $spacing-units-three-half);
+    @include responsive('margin-top', $spacing-units-half);
 }
 
 h3 {
     font-size: $h3-font-size;
-    line-height: $spacing-unit;
-    margin-top: $spacing-unit / 2;
-    &:lang(en) { line-height: $spacing-unit-en; }
-    &:lang(ko) { line-height: $spacing-unit-ko; }
-    &:lang(en) { margin-top: $spacing-unit-en / 2; }
-    &:lang(ko) { margin-top: $spacing-unit-ko / 2; }
+    @include responsive('line-height', $spacing-units);
+    @include responsive('margin-top', $spacing-units-half);
 }
 
 h4 {
     font-size: $h4-font-size;
-    line-height: $spacing-unit;
-    margin-top: $spacing-unit / 2;
-    &:lang(en) { line-height: $spacing-unit-en; }
-    &:lang(ko) { line-height: $spacing-unit-ko; }
-    &:lang(en) { margin-top: $spacing-unit-en / 2; }
-    &:lang(ko) { margin-top: $spacing-unit-ko / 2; }
+    @include responsive('line-height', $spacing-units);
+    @include responsive('margin-top', $spacing-units-half);
 }
 
 
@@ -169,7 +148,7 @@ blockquote {
 
 
 /**
- * Code formatting TODO(seongjae)
+ * Code formatting
  */
 pre,
 code {
@@ -177,7 +156,7 @@ code {
     border-radius: 3px;
     background-color: #eee;
     font-family: $mono-font-family;
-    font-size: $mono-font-size;
+    @include responsive('font-size', $mono-font-sizes);
     vertical-align: top;
 }
 
@@ -186,9 +165,13 @@ code {
 }
 
 pre {
-    padding: $mono-line-height / 2;
-    overflow-x: scroll;
-    line-height: $mono-line-height;
+    overflow-x: auto;
+    //line-height: $mono-line-height;
+    @include responsive('line-height', $mono-line-heights);
+    @include responsive('padding-top', $spacing-units-half);
+    @include responsive('padding-bottom', $spacing-units-half);
+    padding-left: $hr-spacing-unit / 2;
+    padding-right: $hr-spacing-unit / 2;
 
     > code {
         border: 0;
@@ -298,19 +281,4 @@ tbody > tr {
  * Asides
  */
 aside {
-  position: absolute;
-  max-width: 180px;
-  margin-left: $width + $hr-spacing-unit / 2;
-
-  @include media-query($on-palm + 360px) {
-    position: relative;
-    margin-left: 0;
-    padding-bottom: $spacing-unit / 2;
-    &:lang(en) { padding-bottom: $spacing-unit-en / 2; }
-    &:lang(ko) { padding-bottom: $spacing-unit-ko / 2; }
-  }
-
-  figcaption {
-    font-size: $small-font-size;
-  }
 }

@@ -96,13 +96,17 @@
     &:lang(en) {
         // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='" + $spacing-unit-en + "'><rect x='0' y='" + ($spacing-unit-en - 1) + "' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
         font-family: $base-font-family-en;
-        padding: $spacing-unit-en 0;
     }
     &:lang(ko) {
-        // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='" + $spacing-unit-ko + "'><rect x='0' y='" + ($spacing-unit-ko - 1) + "' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
-        font-family: $base-font-family;
-        padding: $spacing-unit-ko 0;
+        // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='28'><rect x='0' y='27' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
+        font-family: 'Nanum Gothic', sans-serif;
+        @media (min-resolution: 192dpi) {
+            font-family: $base-font-family;
+            letter-spacing: -0.15px;
+        }
     }
+    @include responsive(padding-top, $spacing-units);
+    @include responsive(padding-bottom, $spacing-units);
 }
 
 .page-heading {
@@ -162,14 +166,13 @@
 
 .footnotes {
     font-size: $small-font-size;
-    border-top: 1px solid $grey-color-light;
-    &:lang(ko) {
-        margin-top: $spacing-unit-ko;
-        padding-top: $spacing-unit-ko - 1;
-    }
-    &:lang(en) {
-        margin-top: $spacing-unit-en;
-        padding-top: $spacing-unit-en - 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect x='0' y='0' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
+    background-repeat: repeat-x;
+    background-position: top;
+    @include responsive(margin-top, $spacing-units);
+    @include responsive(padding-top, $spacing-units);
+    p {
+        margin: 0;
     }
 }
 
@@ -180,8 +183,11 @@
 .site-comments {
     box-shadow: inset 0 2px 4px -4px #000;
     background-color: #f8f8f8;
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit / 2 - 1px 0 $spacing-unit / 2;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect x='0' y='0' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
+    background-repeat: repeat-x;
+    background-position: top;
+    @include responsive(padding-top, $spacing-units-half);
+    @include responsive(padding-bottom, $spacing-units-half);
 
     .icon {
         float: right;
@@ -191,7 +197,7 @@
         transform-origin: top;
         transition: opacity .5s, transform .5s, min-height .5s ease-in-out;
         #disqus_thread {
-            padding-top: $spacing-unit;
+            @include responsive(padding-top, $spacing-units);
         }
     }
 
