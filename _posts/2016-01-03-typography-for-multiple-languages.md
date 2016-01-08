@@ -12,6 +12,7 @@ comments: true
   line-height: 1.5;
   border: 1px solid #e8e8e8;
   padding: 12px;
+  letter-spacing: 0;
 }
 .figure > li {
   list-style-type: none;
@@ -57,9 +58,9 @@ comments: true
   청춘의 아니더면, 희망의 것이다 (Lorem ipsum dolor sit). 보라, 3,650 수 찬미를 곧 그들의 있으랴? 그들의 동력은 그러므로 봄바람이다. ABC 철환하였는가 뜨고, 같은 만천하의 착목한는 위하여서 (Ut elit ornatus vix), 인생을 따뜻한 그리하였는가?
 </li>
 </div>
-<figcaption>예시 3. 위는 <code>font-family:Georgia,'Nanum Myeongjo'</code>. 아래는 <code>font-family:Georgia</code>.</figcaption>
+<figcaption>예시 3. 위는 font-family:Georgia,'Nanum Myeongjo'. 아래는 font-family:'Nanum Myeongjo'.</figcaption>
 
-저는 html 태그에 lang 설정을 준 후 scss 파일에서 다음과 같은 식으로 언어에 따라 다른 설정을 주는 방법으로 이 문제를 해결하였습니다. mixin을 적절하게 사용하여 이를 더 간단하게 해결할 방법도 있을 것 같은데 아직 좋은 방법을 찾진 못했습니다. 수직 그리드라인에 맞춰서 디자인을 짜려다 보니 스타일 파일이 많이 복잡해져서, 이러느니 그냥 영문 블로그 한글 블로그를 따로 운영하는 게 좋지 않을까 하는 생각도 들더군요.
+저는 html 태그에 lang 설정을 준 후 scss 파일에서 다음과 같은 식으로 언어에 따라 다른 설정을 주는 방법으로 이 문제를 해결하였습니다. (실제로는 mixin을 사용하여 코드의 복잡도를 낮추었습니다.) 수직 그리드라인에 맞춰서 디자인을 짜려다 보니 스타일 파일이 많이 복잡해져서, 이러느니 그냥 영문 블로그 한글 블로그를 따로 운영하는 게 좋지 않을까 하는 생각도 들더군요.
 
 {% highlight scss %}
 body {
