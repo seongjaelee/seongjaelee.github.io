@@ -99,7 +99,7 @@
     }
     &:lang(ko) {
         // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='28'><rect x='0' y='27' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
-        font-family: 'Nanum Gothic', sans-serif;
+        font-family: $base-font-family;
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             font-family: $base-font-family;
             letter-spacing: -0.15px;
@@ -118,7 +118,7 @@
     list-style: none;
 
     > li {
-        padding: $spacing-unit-ko / 2 0;
+        padding: $spacing-unit / 2 0;
         background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect x='0' y='0' width='1' height='1' fill='" + $grey-color-light + "'></rect></svg>");
         background-repeat: repeat-x;
         background-position: bottom;

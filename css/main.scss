@@ -3,23 +3,21 @@
 ---
 @charset "utf-8";
 
-
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 
 // Our variables
-$base-font-family: 'Nanum Myeongjo', serif;
-$base-font-family-en: 'PT Serif', serif;
+$base-font-family: 'Spoqa Han Sans Neo', serif;
+$base-font-family-en: 'Spoqa Han Sans Neo', serif;
 $mono-font-family: Monaco, 'DejaVu Sans Mono', 'Courier New', monospace;
 
 $mono-font-size:   12px;
-$base-font-size:   15px;
-$base-font-size-en: 16px;
-$base-font-size-ko: 15px;
-$base-font-sizes: ('en': 17px, 'ko': 15px);
-$spacing-units: ('en': 24px, 'ko': 28px);
-$spacing-units-half: ('en': 12px, 'ko': 14px);
-$spacing-units-three-half: ('en': 36px, 'ko': 42px);
+$base-font-size:   13px;
+$base-font-sizes: ('en': 13px, 'ko': 14px);
+$spacing-units: ('en': 24px, 'ko': 24px);
+$spacing-units-half: ('en': 12px, 'ko': 12px);
+$spacing-units-three-half: ('en': 36px, 'ko': 36px);
 $mono-font-sizes: ('en': 12px, 'ko': 12px);
-$mono-line-heights: ('en': 18px, 'ko': 21px);
+$mono-line-heights: ('en': 18px, 'ko': 18px);
 
 $small-font-size:  0.8em;
 $h4-font-size:     1em;
@@ -27,16 +25,14 @@ $h3-font-size:     1.25em;
 $h2-font-size:     1.5em;
 $h1-font-size:     2em;
 
-$hr-spacing-unit:  20px;
-$spacing-unit:     24px; // 16/24 and 15/30
-$spacing-unit-en:  24px;
-$spacing-unit-ko:  30px;
+$hr-spacing-unit:  24px;
+$spacing-unit:     24px;
 $width:            560px;
 $mono-line-height: 18px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color:      #f50057;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
