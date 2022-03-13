@@ -3,7 +3,8 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, li, figcaption,
+dl, dd, ol, ul, li,
+figure, figcaption,
 table, th, td {
     margin: 0;
     padding: 0;
@@ -36,11 +37,15 @@ body {
  */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figcaption, table, aside
+figcaption, table, aside
 %vertical-rhythm {
     @include responsive('margin-bottom', $spacing-units-half);
 }
 
+article > ul, article > ol, article > dl
+%vertical-rhythm {
+    @include responsive('margin-bottom', $spacing-units-half);
+}
 
 
 /**
