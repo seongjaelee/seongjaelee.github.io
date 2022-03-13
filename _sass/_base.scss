@@ -47,6 +47,9 @@ article > ul, article > ol, article > dl
     @include responsive('margin-bottom', $spacing-units-half);
 }
 
+ul.post-list {
+    @include responsive('margin-bottom', $spacing-units-half);
+}
 
 /**
  * Images
