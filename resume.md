@@ -91,7 +91,7 @@ date: 2022-03-12
   Bachelor of Science Honors Thesis.
   [[paper:pdf]][p-thesis-pdf] [[presentation:pdf]][p-thesis-ppt]
 - Seong Jae Lee, Amy Greenwald, Victor Naroditskiy. (2007)
-  RoxyBot-06: An (SAA)2 TAC Travel Agent.
+  RoxyBot-06: An (SAA)² TAC Travel Agent.
   International Joint Conferences on Artificial Intelligence.
   [[paper:pdf]][p-ijcai-pdf] [[presentation:pdf]][p-ijcai-ppt]
 - Marc ten Bosch, Seong Jae Lee. (2006)
