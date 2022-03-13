@@ -3,11 +3,11 @@
 ---
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
 
-// Our variables
 $base-font-family: 'IBM Plex Sans KR', serif;
+// Do not use KR font - alphabets with an accent (such as ć) are not supported.
 $base-font-family-en: 'IBM Plex Sans', serif;
 $mono-font-family: Monaco, 'DejaVu Sans Mono', 'Courier New', monospace;
 
