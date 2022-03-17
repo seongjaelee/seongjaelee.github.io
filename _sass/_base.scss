@@ -12,6 +12,12 @@ table, th, td {
     word-wrap: break-word;
 }
 
+html {
+  // Eliminate jumps in horizontal centering by forcing a scroll bar
+  // https://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/
+  overflow-y: scroll;
+}
+
 sub, sup {
     line-height: 0;
 }
