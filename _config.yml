@@ -5,6 +5,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://seongjaelee.github.io" # the base hostname & protocol for your site
 lang: ko
 disqusid: seongjaelee
+exclude:
+  - "README.md"
 
 # Build settings
 markdown: kramdown
