@@ -12,6 +12,6 @@ markdown: kramdown
 kramdown:
   input: GFM
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
