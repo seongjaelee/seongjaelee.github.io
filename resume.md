@@ -4,6 +4,8 @@ title: Resume
 permalink: /resume/
 lang: en
 date: 2022-03-12
+summary: Resume of Seongjae Lee, a ML software engineer in Seattle.
+tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 ---
 
 ## Seongjae Lee
@@ -78,19 +80,20 @@ date: 2022-03-12
 - Seong Jae Lee and Zoran Popović. (2010)
   Learning Behavior Styles with Inverse Reinforcement Learning.
   ACM Transactions on Graphics Vol. 29 Num. 3 (SIGGRAPH 2010)
-  [[paper:pdf]][p-irl-pdf], [[webpage]](http://grail.cs.washington.edu/projects/learning-behavior-styles/)
+  [[paper:pdf]][p-irl-pdf] [[webpage]](http://grail.cs.washington.edu/projects/learning-behavior-styles/)
 - Yongjoon Lee, Seong Jae Lee and Zoran Popović. (2009)
   Compact Character Controllers. ACM Transactions on Graphics Vol. 28 Num. 5 (SIGGRAPH Asia 2009)
-  [[paper:pdf]][p-ccc-pdf], [[webpage]](http://grail.cs.washington.edu/projects/trans-graph/s2009/)
+  [[paper:pdf]][p-ccc-pdf] [[webpage]](http://grail.cs.washington.edu/projects/trans-graph/s2009/)
 - Amy Greenwald, Seong Jae Lee and Victor Naroditskiy. (2008)
   Bidding Heuristics for Simultaneous Auctions: Lessons from TAC Travel.
-  AAAI-08 Workshop on Trading Agent Design and Analysis. [[webpage]](https://www.aaai.org/Library/Workshops/2008/ws08-12-001.php)
+  AAAI-08 Workshop on Trading Agent Design and Analysis.
+  [[webpage]](https://www.aaai.org/Library/Workshops/2008/ws08-12-001.php)
 - Seong Jae Lee. (2007)
   Comparison of Bidding Algorithms in Simultaneous Auctions.
   Bachelor of Science Honors Thesis.
-  [[paper:pdf]][p-thesis-pdf], [[presentation:pdf]][p-thesis-ppt]
+  [[paper:pdf]][p-thesis-pdf] [[presentation:pdf]][p-thesis-ppt]
 - Seong Jae Lee, Amy Greenwald, Victor Naroditskiy. (2007)
-  RoxyBot-06: An (SAA)2 TAC Travel Agent.
+  RoxyBot-06: An (SAA)² TAC Travel Agent.
   International Joint Conferences on Artificial Intelligence.
   [[paper:pdf]][p-ijcai-pdf] [[presentation:pdf]][p-ijcai-ppt]
 - Marc ten Bosch, Seong Jae Lee. (2006)

@@ -3,12 +3,19 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, li, figcaption,
+dl, dd, ol, ul, li,
+figure, figcaption,
 table, th, td {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     word-wrap: break-word;
+}
+
+html {
+  // Eliminate jumps in horizontal centering by forcing a scroll bar
+  // https://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/
+  overflow-y: scroll;
 }
 
 sub, sup {
@@ -41,7 +48,14 @@ figcaption, table, aside
     @include responsive('margin-bottom', $spacing-units-half);
 }
 
+article > ul, article > ol, article > dl
+%vertical-rhythm {
+    @include responsive('margin-bottom', $spacing-units-half);
+}
 
+ul.post-list {
+    @include responsive('margin-bottom', $spacing-units-half);
+}
 
 /**
  * Images
