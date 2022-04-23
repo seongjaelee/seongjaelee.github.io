@@ -5,6 +5,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://seongjaelee.github.io" # the base hostname & protocol for your site
 lang: ko
 disqusid: seongjaelee
+social:
+  name: Seongjae Lee
+  links:
+    - https://www.linkedin.com/in/seongjae-lee-23028359
 
 # Build settings
 markdown: kramdown
@@ -15,3 +19,4 @@ kramdown:
 plugins:
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-seo-tag
