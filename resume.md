@@ -2,18 +2,20 @@
 layout: page
 title: Resume
 lang: en
-date: 2022-03-12
+date: 2022-04-23
 summary: Resume of Seongjae Lee, a ML software engineer in Seattle.
 tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 ---
 
 ## Seongjae Lee
 
-- A ML software engineer interested in reliable ML pipelines while still enabling a flexible and rapid development cycle. A Seattleite.
+- A machine learning software engineer interested in:
+  - building and maintaining reliable ML pipelines, and
+  - providing a flexible and rapid research and development cycle.
+- A Seattleite
 - seongjae@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/seongjae-lee-23028359/)
 - [GitHub](https://github.com/seongjaelee)
-
 
 ## Skills
 - **Programming Experience**: C++, Google Cloud SQL, Python, TypeScript, Java, C#, JavaScript, Dart, HTML/CSS
@@ -22,8 +24,8 @@ tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 
 ## Experience
 - **Senior Software Engineer**, Geo Driving Quality, Google, Seattle (2018–Present)
-  - Developed and launched an ETA prediction ML model using Graph Neural Networks collaborating with DeepMind, improving the accuracy of realtime ETAs by up to 50% in highly congested metros ([blog post][2], [paper][1]).
-  - Built and maintained several ML pipelines that cover training, deploying, serving, logging, and monitoring.
+  - Developed and launched an ETA prediction ML model using Graph Neural Networks. This project was a collaboration with DeepMind. The model improved the quality of predictions by up to 50% in highly congested metros ([blog post][2], [paper][1]).
+  - Built and maintained several ML pipelines that cover training, evaluating, deploying, serving, logging, and monitoring.
   - Optimized batch pipelines processing petabytes of data using Google Dataflow.
 - **Software Engineer**, Cloud Endpoints, Google, Seattle (2017–2018)
   - Developed scalable web pages and components for managing service quotas and usages in AngularJS, JavaScript, TypeScript, and Java.
