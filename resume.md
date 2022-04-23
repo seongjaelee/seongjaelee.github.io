@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Resume
-permalink: /resume/
 lang: en
 date: 2022-03-12
 summary: Resume of Seongjae Lee, a ML software engineer in Seattle.
