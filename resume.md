@@ -3,6 +3,7 @@ layout: page
 title: Resume
 lang: en
 date: 2022-04-23
+last_modified_at: 2022-04-03
 summary: Resume of Seongjae Lee, a ML software engineer in Seattle.
 tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 ---
