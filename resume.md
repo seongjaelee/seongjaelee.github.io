@@ -2,32 +2,32 @@
 layout: page
 title: Resume
 lang: en
-date: 2022-04-23
-last_modified_at: 2022-04-03
-summary: Resume of Seongjae Lee, a ML software engineer in Seattle.
+date: 2024-04-03
+last_modified_at: 2024-03-03
+summary: Resume of Seongjae Lee, a machine learning software engineer in Seattle.
 tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 ---
 
 ## Seongjae Lee
 
-- A machine learning software engineer interested in:
-  - building and maintaining reliable ML pipelines, and
-  - providing a flexible and rapid research and development cycle.
-- A Seattleite
+- A software engineer interested in:
+  - building and maintaining reliable machine learning pipelines, and
+  - building a development environment promoting flexible and rapid ML research.
 - seongjae@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/seongjae-lee-23028359/)
 - [GitHub](https://github.com/seongjaelee)
 
 ## Skills
-- **Programming Experience**: C++, Google Cloud SQL, Python, TypeScript, Java, C#, JavaScript, Dart, HTML/CSS
-- **Frameworks and Tools**: Google Dataflow, TensorFlow, Jupyter Notebook, pandas, AngularJS, AngularDart, GWT, jQuery, HavokAI, OpenGL
+- **Programming Experience**: C++, Python, Google BigQuery, TypeScript, Java, C#, JavaScript, Dart, HTML/CSS
+- **Frameworks and Tools**: Vertex AI, Google Dataflow, TFX, TensorFlow, Jupyter Notebook, pandas, AngularJS, AngularDart, GWT, jQuery, HavokAI, OpenGL
 - **Languages**: English, Korean
 
 ## Experience
-- **Senior Software Engineer**, Geo Driving Quality, Google, Seattle (2018–Present)
-  - Developed and launched an ETA prediction ML model using Graph Neural Networks. This project was a collaboration with DeepMind. The model improved the quality of predictions by up to 50% in highly congested metros ([blog post][2], [paper][1]).
-  - Built and maintained several ML pipelines that cover training, evaluating, deploying, serving, logging, and monitoring.
-  - Optimized batch pipelines processing petabytes of data using Google Dataflow.
+- **Senior Software Engineer**, Traffic AI, Geo, Google, Seattle (2018–Present)
+  - Developed and launched traffic prediction ML models. One of the models using Graph Neural Networks, as a joint project with DeepMind, improved the quality of predictions by up to 50% in highly congested metros ([blog post][2], [paper][1]).
+  - Built and maintained ML pipelines that cover training, evaluating, deploying, serving, logging, tooling, and monitoring.
+  - Maintained and optimized batch pipelines processing petabytes of data on Google Dataflow.
+  - Mainly used C++, Google BigQuery, Python, Google Dataflow, TFX, Vertex AI, Tensorflow, Jupyter Notebook, and pandas.
 - **Software Engineer**, Cloud Endpoints, Google, Seattle (2017–2018)
   - Developed scalable web pages and components for managing service quotas and usages in AngularJS, JavaScript, TypeScript, and Java.
   - Built a scalable web page that visualizes API usages for +1000 hierarchical projects.
@@ -57,18 +57,14 @@ tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 [2]: https://deepmind.com/blog/article/traffic-prediction-with-advanced-graph-neural-networks
 
 ## Education
-- University of Washington, Seattle (2013–2014)
+- University of Washington, Seattle
   - Ph.D. student in Computer Science and Engineering (did not finish)
-  - GPA : 3.85 / 4.0
-- University of Washington, Seattle (2007–2010)
   - Master in Computer Science and Engineering
-  - GPA : 3.82 / 4.0
-- Brown University (2003–2007)
+- Brown University
   - Bachelor of Science in Mathematics and Computer Science
-  - GPA : 3.92 / 4.0, Magna cum laude
-- Seoul National University (2003)
+  - Magna cum laude, Honors in Computer Science
+- Seoul National University
   - Electrical and Computer Engineering (did not finish)
-- Seoul Science High School (2001–2003)
 
 ## Publications
 - Austin Derrow-Pinion, Jennifer She, David Wong, Oliver Lange, Todd Hester, Luis Perez, Marc Nunkesser, Seongjae Lee, Xueying Guo, Brett Wiltshire, Peter W. Battaglia, Vishal Gupta, Ang Li, Zhongwen Xu, Alvaro Sanchez-Gonzalez, Yujia Li, and Petar Veličković. (2021)
@@ -114,10 +110,3 @@ tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 [p-ijcai-ppt]: /assets/resume/07.ijcai.roxybot.presentation.pdf
 [p-siggraph-pdf]: /assets/resume/06.siggraph.segmentation.abstract.pdf
 [p-siggraph-poster]: /assets/resume/06.siggraph.segmentation.poster.pdf
-
-## Awards and Honors
-- Honors in Computer Science, Brown University Computer Science Department, May 2007
-- Samsung Scholarship, Samsung Foundation of Culture, November 2006
-- First Place in Joseph C.Hartshorn Prize in Mathematics, Brown University, November 2004
-- Korean Presidential Scholarship, Korea Science and Engineering Foundation, March 2003
-- Gold Medal in Korean Mathematics Olympiad, Korean Mathematical Society, January 2002
