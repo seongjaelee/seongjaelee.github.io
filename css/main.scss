@@ -5,8 +5,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+@font-face {
+    font-family: 'KoddiUDOnGothic-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/KoddiUDOnGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-$base-font-family: 'IBM Plex Sans KR', serif;
+$base-font-family: 'KoddiUDOnGothic-Regular', 'IBM Plex Sans KR', serif;
 // Do not use KR font - alphabets with an accent (such as ć) are not supported.
 $base-font-family-en: 'IBM Plex Sans', serif;
 $mono-font-family: Monaco, 'DejaVu Sans Mono', 'Courier New', monospace;
