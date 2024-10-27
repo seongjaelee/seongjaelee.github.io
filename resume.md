@@ -2,8 +2,8 @@
 layout: page
 title: Resume
 lang: en
-date: 2024-04-03
-last_modified_at: 2024-03-03
+date: 2024-10-24
+last_modified_at: 2024-10-24
 summary: Resume of Seongjae Lee, a machine learning software engineer in Seattle.
 tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 ---
@@ -24,8 +24,10 @@ tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
 
 ## Experience
 - **Senior Software Engineer**, Traffic AI, Geo, Google, Seattle (2018–Present)
-  - Developed and launched traffic prediction ML models. One of the models using Graph Neural Networks, as a joint project with DeepMind, improved the quality of predictions by up to 50% in highly congested metros ([blog post][2], [paper][1]).
-  - Built and maintained ML pipelines that cover training, evaluating, deploying, serving, logging, tooling, and monitoring.
+  - Developed, launched, maintained, and decommissioned ML models for traffic prediction.
+  - Built and maintained ML pipelines encompassing training, evaluation, deployment, serving, logging, tooling, and monitoring.
+  - Improved ML models by adding input features, enhancing data quality, addressing discrepancies between training and serving data/code, and optimizing model architectures.
+  - Monitored, investigated, and resolved model quality regressions.
   - Maintained and optimized batch pipelines processing petabytes of data on Google Dataflow.
   - Mainly used C++, Google BigQuery, Python, Google Dataflow, TFX, Vertex AI, Tensorflow, Jupyter Notebook, and pandas.
 - **Software Engineer**, Cloud Endpoints, Google, Seattle (2017–2018)
@@ -52,6 +54,35 @@ tags: [resume,Seongjae Lee,Seong Jae Lee,Google Maps]
   - Used integer linear programming (ILP) to model competitors, predict bidding prices, and compute the best bidding strategy.
 - **Research Assistant**, [Center for Computation & Visualization](https://ccv.brown.edu/), Brown University (Summer of 2006)
   - Worked on visualization and user interface for CAVE(CAVE Automatic Virtual Environment), a virtual environment using 3D glasses.
+
+## Selected Projects
+
+### Model Modernization (2023-Present)
+
+This project focused on modernizing a complex machine learning system with over ten years of legacy layers of models, as the interdependency has been slowing down making improvements on any component. The goal was to consolidate numerous entangled layers of models into a single deep learning model, without sacrificing quality. I joined this 3-year-old six-person team to improve the model to match the performance of the existing production system, and productionize it. We achieved a partial launch in 2024, reducing system complexity, accelerating model development cycle, while improving ETA quality. I am currently working on launching the model globally and decommissioning the old systems.
+
+My contributions include:
+
+- Reducing discrepancies between training and serving data and code.
+- Introducing critical model input features previously used in legacy models.
+- Prioritizing the direction of future model research.
+- Building an online model evaluation pipeline.
+- Improving the model training pipeline with a focus on scalability and reliability.
+- Investigating and resolving quality regressions.
+
+### Graph Neural Network Model (2018-2021)
+
+This project, conducted in collaboration with DeepMind, focused on enhancing Google Maps ETA predictions using Graph Neural Networks applied to frequently visited predefined road networks. I joined this 2-year-old three-person team to improve and productionize the model. We achieved a global launch in 2020, which reduced inaccurate ETA trips by up to 50% in heavily congested urban areas. This project is detailed further in the associated [blog post][2] and [research paper][1].
+
+My contributions include:
+
+- Enhancing the model with new features.
+- Investigating and resolving quality regressions.
+- Building and maintaining the model training pipeline.
+- Implementing model serving on existing servers.
+- Designing, executing, and analyzing experiments.
+- Setting up quality monitoring.
+- Building and maintaining an automated ML pipeline for periodic model retraining and deployment.
 
 [1]: https://arxiv.org/abs/2108.11482
 [2]: https://deepmind.com/blog/article/traffic-prediction-with-advanced-graph-neural-networks
