@@ -17,14 +17,14 @@ KoddiUD 온고딕 서체에 대해 더 알고 싶으시다면 다음 링크를 �
 - 한국장애인연구원 - 유니버설디자인 서체: [https://www.koddi.or.kr/ud/sub1_2](https://www.koddi.or.kr/ud/sub1_2)
 
 웹사이트에서 KoddiUD 온고딕을 적용하고 싶다면, 무료 한글 서체를 널리 공유하는 눈누에서 운영하는 CDN을 사용하는 것을 추천합니다. CSS에 다음 구문을 집어넣으시면 됩니다.
-```
+{% highlight css %}
 @font-face {
     font-family: 'KoddiUDOnGothic-Regular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/KoddiUDOnGothic-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
-```
+{% endhighlight %}
 가장 최신 지원 코드는 [눈누의 KoddiUD 온고딕 페이지][noonnu]에서 확인할 수 있습니다.
 
 [morisawa]: https://www.morisawa.co.kr/fonts/ud-fonts
